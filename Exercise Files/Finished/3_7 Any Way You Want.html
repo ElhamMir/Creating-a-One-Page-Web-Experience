@@ -80,7 +80,7 @@
 			})
 			.onStepEnter((response) => {
 				console.log(response);
-				document.getElementById(response.element.dataset.target).setAttribute(response.element.dataset.attribute, response.element.dataset.value);
+				document.getElementById(response.element.dataset.target).setAttribute(response.element.dataset.attribute, response.element.dataset.cololr);
 			});
 
 		window.addEventListener("resize", scroller.resize);

@@ -26,8 +26,20 @@
 			padding: 50px;
 		}
 		div.step{
-			background: #000;
+			background: #fff;
 			color: #fff;
+		}
+		div.step.active{
+			background: #ff9900;
+			transition: ;is linear all;
+		}
+		div.step.blue{
+			background: blue;
+			transition:is linear all;
+		}
+		div.step.inactive{
+			background: #fff;
+			transition: is linear all;
 		}
 	</style>
 </head>
@@ -36,7 +48,7 @@
 	<section>
 		<div><h1>A Simple Scrollytelling Experience</h1></div>
 		<div class="step"><p>As objects scroll into view...</p></div>
-		<div class="step"><p>they can change appearance...</p></div>
+		<div class="step blue"><p>they can change appearance...</p></div>
 		<div class="step"><p>and draw attention to themselves</p></div>
 		<div class="step"><p>and if you didn't notice...</p></div>
 		<div class="step"><p>the old ones can disappear</p></div>
@@ -51,9 +63,13 @@
 			})
 			.onStepEnter((response) => {
 				console.log(response)
+				response.element.classList.remove('inactive');
+				response.element.classList.add()
 			})
 			.onStepExit((response) => {
 				console.log(response)
+response.element.classList.remove('inactive');
+				response.element.classList.add('inactive')
 			});
 	</script>
 	

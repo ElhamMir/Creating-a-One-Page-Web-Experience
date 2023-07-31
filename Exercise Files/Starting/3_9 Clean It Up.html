@@ -94,6 +94,14 @@
 			});
 
 		window.addEventListener("resize", scroller.resize);
+		function reset(response){
+			if(response.element.dataset.attribute == 'r'&& response.direction =='up'){
+				document.getElementById('circObj').setAttribute('r',50);
+			}
+			if(response.element.dataset.attribute== 'opacity'&& response.direction =='up'){
+				document.getElementById('circObj').setAttribute('opacity',1);
+			}
+		}
 	</script>
 </body>
 </html>
